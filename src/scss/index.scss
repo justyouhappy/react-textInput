@@ -1,0 +1,42 @@
+.flex-text-wrap {
+    position: relative;
+    *zoom: 1;
+}
+
+textarea,
+.flex-text-wrap {
+    outline: 0;
+    margin: 0;
+    border: none;
+    padding: 0;
+    *padding-bottom: 0 !important;
+}
+
+.flex-text-wrap {
+    textarea,
+    pre {
+        white-space: pre-wrap;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        *white-space: pre;
+        *word-wrap: break-word;
+    }
+    textarea {
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        resize: none;
+        /* IE7 box-sizing fudge factor */
+        *height: 94%;
+        *width: 94%;
+    }
+    pre {
+        display: block;
+        visibility: hidden;
+    }
+}

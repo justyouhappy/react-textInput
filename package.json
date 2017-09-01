@@ -1,0 +1,43 @@
+{
+  "name": "textinput",
+  "version": "1.0.0",
+  "description": "react",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "clean": "rd /s/q lib && mkdir lib",
+    "start": "webpack-dev-server --progress --colors --devtool source-map",
+    "build": "webpack -d"
+  },
+  "keywords": [
+    "react",
+    "input",
+    "textInput"
+  ],
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "author": "alan",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "file-loader": "^0.11.2",
+    "node-sass": "^4.5.3",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "sass-loader": "^6.0.6",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.5.5"
+  },
+  "devDependencies": {
+    "extract-text-webpack-plugin": "^3.0.0"
+  }
+}
