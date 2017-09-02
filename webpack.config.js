@@ -1,19 +1,21 @@
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");//css
 module.exports = {
-    entry: './src/js/entry.jsx',
+    entry: {
+        static:'./exmple/entry.jsx',
+        lib:'./src/js/entry.jsx'
+    },
     output: {
-        path: __dirname + '/static/',
-        publicPath: 'http://localhost:8080/static/',
-        filename: 'index.js'
+        path: __dirname,
+        publicPath: 'http://localhost:8080/',
+        filename: '[name]/index.js',
+        library: '[name]',
+        libraryTarget: 'umd'
     },
     module: {
         rules: [
             {
-				test: /.(scss)|(css)$/, use: ExtractTextPlugin.extract({
-					fallback: 'style-loader',
-					use: ['css-loader', 'sass-loader']
-				})
+				test: /.(scss)|(css)$/, use: ['style-loader', 'css-loader', 'sass-loader']
 			},
             {
                 test: /\.jsx?$/,
@@ -33,10 +35,7 @@ module.exports = {
     resolve: {
 		modules: ['node_modules'],
 		extensions: ['.js', '.jsx'],
-	},
-    plugins: [
-		new ExtractTextPlugin('bundle.css')
-    ]
+	}
 }
 
 

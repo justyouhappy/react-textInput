@@ -1,2 +1,2 @@
-import textInput from './lib/entry.js';
-module.exports = textInput;
+import TextInput from './lib/index.js';
+export default TextInput;

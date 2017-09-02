@@ -1,15 +1,14 @@
 {
   "name": "textinput",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "react",
   "main": "index.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "clean": "rd /s/q lib && mkdir lib",
     "start": "webpack-dev-server --progress --colors --devtool source-map",
-    "build": "webpack -d"
+    "build": "rm -rf static && rm -rf lib && webpack -d"
   },
   "keywords": [
     "react",
@@ -17,7 +16,6 @@
     "textInput"
   ],
   "files": [
-    "dist",
     "lib"
   ],
   "author": "alan",
@@ -34,6 +32,7 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
     "url-loader": "^0.5.9",
     "webpack": "^3.5.5"
   },
